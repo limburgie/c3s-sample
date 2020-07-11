@@ -1,0 +1,5 @@
+#* Test *#
+
+#macro (hello $name)
+	Hello, $name!
+#end

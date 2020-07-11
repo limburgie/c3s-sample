@@ -1,0 +1,33 @@
+{
+	"name": "UB33 Music",
+	"templateEngine": "VELOCITY",
+
+	"templates": [
+		{
+			"name": "base",
+//			"contents": "templates/base.ftl"
+			"contents": "templates/base.vm"
+		}
+	],
+
+	"errorPage": {
+		"name": "Error",
+		"template": "base",
+		"inserts": {
+//			"body": "pages/error.ftl"
+			"body": "pages/error.vm"
+		}
+	},
+
+	"pages": [
+		{
+			"friendlyUrl": "home",
+			"name": "Home",
+			"template": "base",
+			"inserts": {
+//				"body": "pages/home.ftl"
+				"body": "pages/home.vm"
+			}
+		}
+	]
+}

@@ -1,0 +1,275 @@
+{
+	"name": "Contentful",
+	"indexPage": "find-all",
+	"templateEngine": "FREEMARKER",
+
+	"contentRepositoryConnection": {
+		"type": "CONTENTFUL",
+		"repositoryId": "az9yg7d257li",
+		"accessToken": "5a29a51675e31d9ffc52b6fbfdd0511d1a367573a9d0e3e0d91145f18217983c"
+	},
+
+	"templates": [
+		{
+			"name": "top-level",
+			"contents": "../templates/top-level.ftl"
+		},
+		{
+			"name": "second-level",
+			"extendsFrom": "top-level",
+			"inserts": {
+				"body": "../templates/second-level.ftl"
+			}
+		}
+	],
+
+	"errorPage": {
+		"name": "Error",
+		"template": "top-level",
+		"inserts": {
+			"body": "../pages/error.ftl"
+		}
+	},
+
+	"pages": [
+		{
+			"name": "Query logic",
+			"children": [
+				{
+					"friendlyUrl": "find-all",
+					"name": "Find all",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/01-find-all.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "order-by",
+					"name": "Order by text field",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/02-order-by.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "find-one",
+					"name": "Find one",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/03-find-one.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "filter",
+					"name": "Filter",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/04-filter.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "pagination",
+					"name": "Pagination",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/05-pagination.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "find-random",
+					"name": "Find random",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/06-find-random.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "count",
+					"name": "Count",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/07-count.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "date-today",
+					"name": "Date today (Prismic & Contentful)",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/08-date-today.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "date-in-past-future",
+					"name": "Date in past/future (Prismic & Contentful)",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/09-date-in-past-future.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "find-by-item",
+					"name": "Find by content item",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/10-find-by-item.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "find-by-id",
+					"name": "Find by ID",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/11-find-by-id.ftl"
+					}
+				}
+			]
+		},
+		{
+			"name": "Item properties",
+			"children": [
+				{
+					"friendlyUrl": "id",
+					"name": "ID",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/item-properties/01-id.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "uid",
+					"name": "UID (Prismic)",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/item-properties/02-uid.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "metadates",
+					"name": "Metadates",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/item-properties/03-metadates.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "edit-url",
+					"name": "Edit URL",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/item-properties/04-edit-url.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "localization",
+					"name": "Localization",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/item-properties/05-localization.ftl"
+					}
+				}
+			]
+		},
+		{
+			"name": "Field types",
+			"children": [
+				{
+					"friendlyUrl": "text",
+					"name": "Text",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/01-text.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "rich-text",
+					"name": "Rich Text",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/02-rich-text.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "date",
+					"name": "Date",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/03-date.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "number",
+					"name": "Number",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/04-number.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "asset",
+					"name": "Asset",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/05-asset.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "reference",
+					"name": "Reference",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/06-reference.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "geolocation",
+					"name": "Geolocation (Prismic & Contentful)",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/07-geolocation.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "boolean",
+					"name": "Boolean (Contentful & GraphCMS)",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/08-boolean.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "json",
+					"name": "JSON (Contentful & GraphCMS)",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/09-json.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "group",
+					"name": "Group (Prismic)",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/10-group.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "web-link",
+					"name": "Web link (Prismic)",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/11-web-link.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "image",
+					"name": "Image (Prismic)",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/field-types/12-image.ftl"
+					}
+				}
+			]
+		}
+	]
+}

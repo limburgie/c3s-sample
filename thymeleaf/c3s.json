@@ -1,0 +1,36 @@
+{
+	"name": "Site name",
+	"indexPageFriendlyUrl": "query-logic",
+	"templateEngine": "THYMELEAF",
+
+	"contentRepositoryConnection": {
+		"type": "PRISMIC",
+		"repositoryId": "https://c3s-sample-content.prismic.io/api",
+	},
+
+	"templates": [
+		{
+			"name": "template",
+			"contents": "template.html"
+		}
+	],
+
+	"errorPage": {
+		"name": "Error",
+		"template": "template",
+		"inserts": {
+			"body": "error.html"
+		}
+	},
+
+	"pages": [
+		{
+			"friendlyUrl": "query-logic",
+			"name": "Basic query logic",
+			"template": "template",
+			"inserts": {
+				"body": "index.html"
+			}
+		}
+	]
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<title>$site.name</title>
+</head>
+<body>
+
+<ul>
+	#foreach ($page in $site.pages)
+		<li>
+			#if (!$page.children.empty)
+				$page.name
+				<ul>
+					#foreach ($child in $page.children)
+						<li>
+							<a href="/$child.friendlyUrl">$child.name</a>
+						</li>
+					#end
+				</ul>
+			#else
+				<a href="/$page.friendlyUrl">$page.name</a>
+			#end
+		</li>
+	#end
+</ul>
+
+$inserts.body
+
+</body>
+</html>
