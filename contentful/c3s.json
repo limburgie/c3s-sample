@@ -122,6 +122,22 @@
 					"inserts": {
 						"body": "../pages/query-logic/11-find-by-id.ftl"
 					}
+				},
+				{
+					"friendlyUrl": "search",
+					"name": "Search",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/12-search.ftl"
+					}
+				},
+				{
+					"friendlyUrl": "with-tag",
+					"name": "With tag",
+					"template": "top-level",
+					"inserts": {
+						"body": "../pages/query-logic/13-with-tag.ftl"
+					}
 				}
 			]
 		},
